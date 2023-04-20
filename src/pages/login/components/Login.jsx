@@ -20,7 +20,7 @@ function Login() {
     e.preventDefault();
     const loggeduser = JSON.parse(localStorage.getItem("users"));
 
-    const alluser = loggeduser.filter(
+    const alluser = loggeduser.find(
       (user) => user.email === input.email && user.password === input.password
     );
 

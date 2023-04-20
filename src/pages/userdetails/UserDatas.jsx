@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 
-const UserDatas = ({ name, email }) => {
+// const UserDatas = ({ name, email }) => {
+const UserDatas = () => {
   const navigate = useNavigate();
-  //   const authData = JSON.parse(localStorage.getItem("auth"));
-  //   console.log(authData);
-  //   const [all, setAll] = useState(authData);
+  const authData = JSON.parse(localStorage.getItem("auth"));
+  console.log(authData);
+  const [all, setAll] = useState(authData);
   const handleClick = () => {
     localStorage.removeItem("auth");
     // window.location.reload;
@@ -20,8 +21,8 @@ const UserDatas = ({ name, email }) => {
             <div className="col-lg-8">
               <div className="section-title text-center">
                 <h2 className="fw-bold mb-5">User Data</h2>
-                <h2 className="fw-bold mb-5">name :- {name}</h2>
-                <h2 className="fw-bold mb-5">Email :-{email}</h2>
+                <h2 className="fw-bold mb-5">name :- {all.name}</h2>
+                <h2 className="fw-bold mb-5">Email :-{all.email}</h2>
                 <div
                   className="btn btn-danger px-3 mt-3 ms-5"
                   onClick={handleClick}

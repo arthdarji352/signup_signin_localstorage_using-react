@@ -7,7 +7,7 @@ import Service from "./pages/service/Index";
 import Contact from "./pages/contact/Index";
 import Register from "./pages/register/Index";
 import Login from "./pages/login/Index";
-import UserDatas from "./pages/userdetails/Index";
+import UserDatas from "./pages/userdetails/UserDatas";
 
 function App() {
   return (

@@ -86,11 +86,11 @@ function Register() {
         const newUser = input;
 
         setUsers((prev) => [...prev, newUser]);
+        alert("register successfully");
         // navigate("/login");
       } else {
         alert("email already there");
       }
-      alert("user registerd");
     } else {
       alert(" please enter require fields");
     }
