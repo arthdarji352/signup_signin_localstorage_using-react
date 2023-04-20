@@ -90,7 +90,7 @@ function Register() {
       } else {
         alert("email already there");
       }
-      alert("user registerd");
+      alert("Successfully Registered");
     } else {
       alert(" please enter require fields");
     }
